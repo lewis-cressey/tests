@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+.hidden {
+	visibility: hidden;
+}
+
+body {
+	background: white;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: stretch;
+	align-content: stretch;
+	align-items: start;
+}
+
+main {
+	flex-grow: 1;
+	font-size: 20px;
+	font-family: serif;
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	max-width: 800px;
+
+	margin: 0 auto;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	padding: 1rem;
+	background: #234;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 30px;
+	font-family: Dosis;
+}
+
+option::before {
+	content: "☐";
+}
+
+option.complete::before {
+	content: "☑";
+}
+
+#edit-region {
+	position: relative;
+	border: 1px solid black;
+	box-sizing: border-box;
+	width: 780px;
+	height: 25rem;
+}
+
+#editor {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	font-size: 20px;
+}
+
+#popup-layer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	
+	z-index: 1;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+#stderr {
+	border: 1px solid red;
+	padding: 1rem;
+	max-width: 80%;
+	
+	color: red;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#score-bar {
+	text-align: right;
+	font-size: 90%;
+	font-variant: small-caps;
+}
+
+#toolbar {
+	text-align: center;
+	padding: 4px;
+}
+
+#toolbar button {
+	border: 1px solid white;
+	background: transparent;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	transition: box-shadow,transform 0.05s ease-in-out;
+}
+
+#toolbar button:hover {
+	box-shadow: 0 0 8px white;
+}
+
+#toolbar button:active {
+	transform: scale(90%);
+}
+
+#terminal {
+	background: black;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #cf0;
+	height: 10rem;
+	overflow: scroll;
+}
+
+canvas {
+    border: 1px solid white;
+    background: white;
+    padding: 4px;
+}
+
+.input {
+	color: #f70;
+}
+
+.hidden {
+    display: none;
+}
