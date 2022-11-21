@@ -171,7 +171,7 @@ class Question07(Question):
         
     def check(self):
         values = [ int(word) for word in self.get_terminal().split() ]
-        return values == [ x for x in range(7, 707) if x % 7 != 0 ]
+        return values == [ x for x in range(7, 701) if x % 7 != 0 ]
         
 class Question08(Question):
     def __init__(self):
