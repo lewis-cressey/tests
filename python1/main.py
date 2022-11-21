@@ -239,7 +239,11 @@ def update_score():
 
 def clear(event = None):
     question = Question.instance()
-    page.editor.session.setValue(window.localStorage.getItem(question.name) or "")
+    text = window.localStorage.getItem(question.name)
+    
+    if text is not None: page.editor.session.setValue(text)
+    else: page.editor.session.setValue("")
+    
     page.question_text.innerHTML = Question.instance().html
     page.terminal.innerHTML = ""   
     page.canvas.classList.toggle("hidden", not question.use_turtle)
