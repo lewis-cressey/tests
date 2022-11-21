@@ -42,12 +42,17 @@ class Turtle {
     }
 
     getHistory() {
-        const angles = Array.from(this.history.keys())
+        const angles = []
         const lengths = []
-        angles.sort((a, b) => parseInt(a) > parseInt(b))
-        for (let angle of angles) {
+        for (let angle of this.history.keys()) {
+			angles.push(parseInt(angle))
             lengths.push(this.history.get(angle))
         }
+        angles.sort((a, b) => {
+			if (a > b) return 1
+			if (a < b) return -1
+			return 0
+		})
         return { angles, lengths }
     }
 

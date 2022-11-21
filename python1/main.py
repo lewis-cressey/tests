@@ -70,7 +70,7 @@ class Question:
 
     def check_regular_polygon(self, num_sides):
         angles, lengths = self.get_turtle_history()
-
+        
         if len(angles) != num_sides: return False
         angle = 360 / num_sides
         length = lengths[0]
