@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+	<head>
+		<style>
+			body {
+				max-width: 40em;
+				margin: 0 auto;
+				background: black;
+				color: #eee;
+				font-family: sans-serif;
+			}
+			h1 {
+				font-size: 1.2rem;
+				text-decoration: underline;
+				text-align: center;
+			}
+			.gallery {
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-template-rows: auto auto;
+				justify-items: center;
+				align-items: center;
+			}
+			.gallery a {
+			}
+			.gallery img {
+				max-width: 18em;
+				max-height: 18em;
+				border: 1px solid black;
+				margin: 2px;
+				transition: transform 0.2s ease-in-out;
+			}
+			.gallery img:hover {
+				transform: scale(1.05);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Year 9 Assessment: Images</h1>
+		<p>
+			Import the images below into Gimp.
+		</p>
+		<div class="gallery">
+			<figure>
+				<a href="image1.png"><img src="image1.png" /></a>
+				<figcaption>Man watching a television.</figcaption>
+			</figure>
+			<figure>
+				<a href="image2.png"><img src="image2.png" /></a>
+				<figcaption>Casablanca scene</figcaption>
+			</figure>
+		</div>
+	</body>
+</html>
